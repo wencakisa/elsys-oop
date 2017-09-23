@@ -14,6 +14,9 @@ public:
         top_ = 0;
     }
 
+    bool is_empty() { return top_ == 0; }
+    bool is_full()  { return top_ == STACK_SIZE; }
+
     void push(int val) {
         if (!is_full()) {
             data_[top_++] = val;
@@ -28,8 +31,6 @@ public:
         return 0;
     }
 
-    bool is_empty() { return top_ == 0; }
-    bool is_full()  { return top_ == STACK_SIZE; }
 };
 
 int main() {
