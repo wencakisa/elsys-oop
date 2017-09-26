@@ -1,0 +1,8 @@
+Програма, която от стандартния вход получава последователност от скоби (( )) ( ) ()((()))
+
+Hints:
+    Use Stack
+
+    1. On opening bracket, push to Stack.
+    2. On closing bracket, pop from the Stack.
+    3. In the end, check if the stack is empty.
