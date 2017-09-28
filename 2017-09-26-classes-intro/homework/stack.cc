@@ -13,8 +13,6 @@ class Stack {
 public:
     Stack() : top_(0) {}
 
-    int get_top() { return top_; }
-
     bool empty() { return top_ == 0; }
     bool full()  { return top_ == MAX_LEN; }
 
@@ -29,7 +27,6 @@ public:
 
     int pop() {
         if (empty()) {
-            cerr << "Stack is empty." << endl;
             return -1;
         }
 
@@ -41,7 +38,7 @@ bool is_opening(char symbol) { return symbol == OPENING_BRACKET; }
 bool is_closing(char symbol) { return symbol == CLOSING_BRACKET; }
 
 int main() {
-    Stack ob_stack, cb_stack;
+    Stack st;
     string brackets;
 
     cout << "Enter brackets sequence: ";
@@ -51,13 +48,15 @@ int main() {
         char symbol = brackets[i];
 
         if (is_opening(symbol)) {
-            ob_stack.push(0);
+            st.push(0);
         } else if (is_closing(symbol)) {
-            cb_stack.push(0);
+            if (st.pop() == -1) {
+                cout << "Brackets are not balanced." << endl;
+                return 0;
+            }
         }
     }
 
-    cout << "Brackets are " << ((ob_stack.get_top() == cb_stack.get_top()) ? "" : "not ") << "balanced." << endl;
-
+    cout << "Brackets are " << (st.empty() ? "" : "not ") << "balanced." << endl;
     return 0;
 }
