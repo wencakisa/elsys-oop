@@ -38,6 +38,10 @@ int main() {
         cout << "*it = " << *it << endl;
     }
 
+    for (auto it = vi.begin(); it != vi.end(); ++it) {
+        cout << "*it = " << *it << endl;
+    }
+
     return 0;
 }
 
