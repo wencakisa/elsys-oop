@@ -45,7 +45,7 @@ int main() {
     try {
         string token;
         list<double> values;
-        
+
         bool options_set = false;
         bool strict = false, ints_only = false;
 
@@ -92,7 +92,7 @@ int main() {
         double min = values.front();
         double max = values.back();
         double avg = get_avg(values, ints_only);
-        
+
         cout << min << " " << max << " " << setprecision(PRECISION) << avg << endl;
     } catch (Exception ex) {
         cout << "ERR: " << ex.get_msg() << endl;
