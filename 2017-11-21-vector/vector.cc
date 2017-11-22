@@ -22,16 +22,16 @@ class Vector {
     class abstract_iterator {
         friend class Vector;
 
-        Vector* vector_;
+        Vector& vector_;
         int current_index_;
     public:
-        abstract_iterator(Vector* v, int current) :
+        abstract_iterator(Vector& v, int current) :
             vector_(v),
             current_index_(current)
         {}
 
         bool operator==(const abstract_iterator& other) {
-            return (vector_ == other.vector_) && (current_index_ == other.current_index_);
+            return (vector_.buffer_ == other.vector_.buffer_) && (current_index_ == other.current_index_);
         }
 
         bool operator!=(const abstract_iterator& other) {
@@ -39,7 +39,7 @@ class Vector {
         }
 
         int& operator*() {
-            return (*vector_)[current_index_];
+            return vector_[current_index_];
         }
     };
 
@@ -85,32 +85,49 @@ public:
     class iterator : public abstract_iterator {
         friend class Vector;
 
-        iterator(Vector* v, int current) :
+        iterator(Vector& v, int current) :
             abstract_iterator(v, current)
         {}
     public:
         iterator& operator++() {
-            current_index_++;
+            ++current_index_;
             return *this;
         }
 
         iterator operator++(int) {
-            iterator res(vector_, current_index_++);
+            iterator res(vector_, ++current_index_);
             return res;
+        }
+
+        iterator& operator--() {
+            --current_index_;
+            return *this;
         }
     };
 
     iterator begin() {
-        return iterator(this, 0);
+        return iterator(*this, 0);
     }
 
     iterator end() {
-        return iterator(this, size_);
+        return iterator(*this, size_);
+    }
+
+    iterator find(iterator first, iterator last, const int& x) {
+        while (first != last) {
+            if (*first == x) {
+                return first;
+            }
+
+            ++first;
+        }
+
+        return last;
     }
 
     iterator insert(iterator pos, const int& x) {
         int index = pos.current_index_;
-        int *buffer = pos.vector_->buffer_;
+        int *buffer = pos.vector_.buffer_;
         int *tmp = new int[size_ + 1];
 
         int i = 0;
@@ -125,13 +142,13 @@ public:
 
         buffer_ = tmp;
 
-        return iterator(this, index);
+        return iterator(*this, index);
     }
 
     iterator erase(iterator pos) {
         int index = pos.current_index_;
-        int *buffer = pos.vector_->buffer_;
-        int *tmp = new int[size_ + 1];
+        int *buffer = pos.vector_.buffer_;
+        int *tmp = new int[size_ - 1];
 
         int i = 0;
         for (; i < index; ++i) {
@@ -144,27 +161,28 @@ public:
 
         buffer_ = tmp;
 
-        return iterator(this, index);
+        return iterator(*this, index);
     }
 
     iterator erase(iterator first, iterator last) {
-        while (first != last) {
+        Vector::iterator it = ++first;
+        while (it != last) {
             erase(first);
-            first++;
+            ++it;
         }
 
-        return erase(last);
+        return erase(first);
     }
 
     class reverse_iterator : public abstract_iterator {
         friend class Vector;
 
-        reverse_iterator(Vector* v, int current) :
+        reverse_iterator(Vector& v, int current) :
             abstract_iterator(v, current)
         {}
     public:
         reverse_iterator& operator++() {
-            current_index_--;
+            --current_index_;
             return *this;
         }
 
@@ -175,11 +193,11 @@ public:
     };
 
     reverse_iterator rbegin() {
-        return reverse_iterator(this, size_ - 1);
+        return reverse_iterator(*this, size_ - 1);
     }
 
     reverse_iterator rend() {
-        return reverse_iterator(this, -1);
+        return reverse_iterator(*this, -1);
     }
 
     int size() const {
@@ -246,6 +264,18 @@ public:
         --size_;
     }
 
+    Vector intersection(Vector& other) {
+        Vector result;
+
+        for (Vector::iterator it = begin(); it != end(); ++it) {
+            if (other.find(other.begin(), other.end(), *it) != other.end()) {
+                result.push_back(*it);
+            }
+        }
+
+        return result;
+    }
+
 private:
     void resize() {
         int *tmp = buffer_;
@@ -278,33 +308,52 @@ void fill(Vector& v, int from, int to) {
 }
 
 int main(int argc, const char* argv[]) {
-    int v1_start = atoi(argv[1]);
-    int v1_end = atoi(argv[2]);
-    Vector v1;
-    fill(v1, v1_start, v1_end);
+    try {
+        // -------------------------------------------------------------------------
+        int v1_start = atoi(argv[1]);
+        int v1_end = atoi(argv[2]);
+        Vector v1;
+        fill(v1, v1_start, v1_end);
 
-    int v2_start = atoi(argv[3]);
-    int v2_end = atoi(argv[4]);
-    Vector v2;
-    fill(v2, v2_start, v2_end);
+        int v2_start = atoi(argv[3]);
+        int v2_end = atoi(argv[4]);
+        Vector v2;
+        fill(v2, v2_start, v2_end);
 
-    cout << "v1: " << v1 << endl;
-    cout << "v2: " << v2 << endl;
+        // -------------------------------------------------------------------------
+        cout << "v1: " << v1 << endl;
+        cout << "v2: " << v2 << endl;
 
-    v1.push_back(-100);
-    v2.push_back(-100);
+        // -------------------------------------------------------------------------
+        Vector intersection = v1.intersection(v2);
+        cout << "equal elements in v1 and v2: " << intersection.size() << endl;
 
-    cout << "v1: " << v1 << endl;
-    cout << "v2: " << v2 << endl;
+        // -------------------------------------------------------------------------
+        v1.push_back(-100);
+        v2.push_back(-100);
 
-    Vector v = v2;
-    cout << "v: " << v << endl;
+        cout << "v1: " << v1 << endl;
+        cout << "v2: " << v2 << endl;
 
-    for (Vector::reverse_iterator rit = v1.rbegin(); rit != v1.rend(); ++rit) {
-        v.insert(v.begin(), *rit);
+        // -------------------------------------------------------------------------
+        Vector v = v2;
+        cout << "v: " << v << endl;
+
+        // -------------------------------------------------------------------------
+        for (Vector::reverse_iterator rit = v1.rbegin(); rit != v1.rend(); ++rit) {
+            v.insert(v.begin(), *rit);
+        }
+        cout << "v: " << v << endl;
+
+        // -------------------------------------------------------------------------
+        Vector::iterator bit = v.find(v.begin(), v.end(), -100);
+        v.erase(bit, v.end());
+
+        cout << "v: " << v << endl;
+    } catch (const VectorError& ex) {
+        cout << ex.get_msg() << endl;
+        return 1;
     }
-
-    cout << "v: " << v << endl;
 
     return 0;
 }
