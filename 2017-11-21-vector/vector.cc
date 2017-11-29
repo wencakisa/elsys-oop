@@ -348,7 +348,6 @@ int main(int argc, const char* argv[]) {
         // -------------------------------------------------------------------------
         Vector::iterator bit = v.find(v.begin(), v.end(), -100);
         v.erase(bit, v.end());
-
         cout << "v: " << v << endl;
     } catch (const VectorError& ex) {
         cout << ex.get_msg() << endl;
