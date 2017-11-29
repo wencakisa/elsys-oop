@@ -76,16 +76,16 @@ private:
 int main() {
     list<Shape*> shapes;
 
-	Circle c1(Point(0,0), 3);
-	shapes.push_back(&c1);
-	Circle c2(Point(6,0), 3);
-	shapes.push_back(&c2);
+    Circle c1(Point(0,0), 3);
+    shapes.push_back(&c1);
+    Circle c2(Point(6,0), 3);
+    shapes.push_back(&c2);
 
-	Rectangle r1(Point(-1, -2), Point(1,2));
-	shapes.push_back(&r1);
+    Rectangle r1(Point(-1, -2), Point(1,2));
+    shapes.push_back(&r1);
 
-	for(auto it = shapes.begin(); it != shapes.end(); ++it) {
-		(*it)->draw();
+    for (auto it = shapes.begin(); it != shapes.end(); ++it) {
+        (*it)->draw();
     }
 
     return 0;
