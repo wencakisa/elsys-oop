@@ -10,24 +10,25 @@ using namespace std;
 #define COMMANDS_DELIMITER '.'
 #define OPERATION_DELIMITER ':'
 
-vector<string> split_into_tokens(const string& str, const char& delimiter) {
+string& remove_spaces(string& str) {
+    str.erase(remove(str.begin(), str.end(), ' '), str.end());
+    return str;
+}
+
+vector<string> split_into_tokens(const string& str, const char& delimiter, bool no_spaces = false) {
     istringstream in(str);
 
     vector<string> tokens;
-    string chunk;
-    while (getline(in, chunk, delimiter)) {
-        tokens.push_back(chunk);
+    string token;
+    while (getline(in, token, delimiter)) {
+        if (no_spaces) {
+            token = remove_spaces(token);
+        }
+
+        tokens.push_back(token);
     }
 
     return tokens;
-}
-
-template <class T>
-void print_array(T arr[], int size) {
-    for (int i = 0; i < size; ++i) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
 }
 
 int to_int(const string& str) {
@@ -36,6 +37,22 @@ int to_int(const string& str) {
     iss >> value;
 
     return value;
+}
+
+template <class T>
+void print_array(T arr[], int size) {
+    for (int i = 0; i < size; ++i) {
+        cout << arr[i];
+
+        if (i < size - 1) {
+            cout << " ";
+        }
+    }
+    cout << endl;
+}
+
+void print_as_error(const string& message) {
+    cout << "ERROR: " << message << endl;
 }
 
 class ListOfArrays {
@@ -75,6 +92,10 @@ public:
             return !operator==(other);
         }
 
+        ArrayNode* operator*() {
+            return current_;
+        }
+
         Iterator& operator++() {
             current_ = current_->next_;
             return *this;
@@ -108,7 +129,7 @@ public:
 
         Iterator& ordered(bool ascending = true) {
             if (ascending) {
-                sort(current_->data_, current_->data_ + size(), less<int>());
+                sort(current_->data_, current_->data_ + size());
             } else {
                 sort(current_->data_, current_->data_ + size(), greater<int>());
             }
@@ -141,12 +162,12 @@ public:
         }
 
         double average() {
-            return static_cast<double>(sum()) / size();
+            return (double) sum() / size();
         }
 
         double median() {
+            int middle = size() / 2;
             this->ordered();
-            int middle = size() / 2.0;
 
             if (size() % 2 == 0) {
                 return (operator[](middle) + operator[](middle - 1)) / 2.0;
@@ -201,6 +222,14 @@ public:
         return *this;
     }
 
+    Iterator begin() {
+        return Iterator(*this, head_->next_);
+    }
+
+    Iterator end() {
+        return Iterator(*this, head_);
+    }
+
     int size() const {
         return size_;
     }
@@ -218,20 +247,6 @@ public:
         size_++;
     }
 
-    void averages(double averages[]) {
-        int index = 0;
-        for (auto it = begin(); it != end(); ++it) {
-            averages[index++] = it.average();
-        }
-    }
-
-    void medians(double medians[]) {
-        int index = 0;
-        for (auto it = begin(); it != end(); ++it) {
-            medians[index++] = it.median();
-        }
-    }
-
     void sizes(int sizes[]) {
         int index = 0;
         for (auto it = begin(); it != end(); ++it) {
@@ -246,18 +261,45 @@ public:
         }
     }
 
-    Iterator begin() {
-        return Iterator(*this, head_->next_);
+    void averages(double averages[]) {
+        int index = 0;
+        for (auto it = begin(); it != end(); ++it) {
+            averages[index++] = it.average();
+        }
     }
 
-    Iterator end() {
-        return Iterator(*this, head_);
+    void medians(double medians[]) {
+        int index = 0;
+        for (auto it = begin(); it != end(); ++it) {
+            medians[index++] = it.median();
+        }
     }
 
     ListOfArrays& ordered(bool ascending = true) {
+        vector<ArrayNode*> to_sort;
         for (auto it = begin(); it != end(); ++it) {
             it.ordered(ascending);
+            to_sort.push_back(*it);
         }
+
+        sort(to_sort.begin(), to_sort.end(), less_nodes);
+        if (!ascending) {
+            reverse(to_sort.begin(), to_sort.end());
+        }
+
+        ListOfArrays sorted_list;
+        for (auto it = to_sort.begin(); it != to_sort.end(); ++it) {
+            ArrayNode* current = *it;
+            int size = current->size_;
+
+            int* new_array = new int[size];
+            for (int i = 0; i < size; ++i) {
+                new_array[i] = current->data_[i];
+            }
+
+            sorted_list.push(new_array, 0, size);
+        }
+        *this = sorted_list;
 
         return *this;
     }
@@ -289,11 +331,16 @@ public:
 
         cout << endl;
     }
+
+private:
+    static bool less_nodes(const ArrayNode* a, const ArrayNode* b) {
+        return a->size_ < b->size_;
+    }
 };
 
 istream& operator>>(istream& in, ListOfArrays& list) {
     string token;
-    getline(cin, token);
+    getline(in, token);
 
     vector<string> tokens = split_into_tokens(token, ELEMENTS_DELIMITER);
     for (auto it = tokens.begin(); it != tokens.end(); ++it) {
@@ -328,15 +375,16 @@ int main() {
             break;
         }
 
-        vector<string> operations = split_into_tokens(token, COMMANDS_DELIMITER);
+        vector<string> operations = split_into_tokens(token, COMMANDS_DELIMITER, true);
         bool use_iterator = operations.front() == "begin";
 
         ListOfArrays copy_list;
         copy_list = l;
+
         ListOfArrays::Iterator begin = copy_list.begin();
 
         for (auto it = operations.begin(); it != operations.end(); ++it) {
-            vector<string> parts = split_into_tokens(*it, OPERATION_DELIMITER);
+            vector<string> parts = split_into_tokens(*it, OPERATION_DELIMITER, true);
 
             string operation = parts.front();
 
@@ -350,7 +398,7 @@ int main() {
             if (use_iterator) {
                 if (operation == "next") {
                     if (++begin == copy_list.end()) {
-                        cout << "ERROR: End of iteration" << endl;
+                        print_as_error("End of iteration");
                         break;
                     }
                 } else if (operation == "show") {
@@ -359,23 +407,23 @@ int main() {
                 } else if (operation == "at") {
                     int index = to_int(parts.at(1));
 
-                    if (index < l.size()) {
+                    if (index >= 0 && index < l.size()) {
                         cout << begin[index] << endl;
                     } else {
-                        cout << "ERROR: Index out of bounds" << endl;
+                        print_as_error("Index out of bounds");
                     }
                 } else if (operation == "size") {
                     cout << begin.size() << endl;
+                } else if (operation == "sum") {
+                    cout << begin.sum() << endl;
                 } else if (operation == "average") {
                     cout << begin.average() << endl;
                 } else if (operation == "median") {
-                    cout << begin.average() << endl;
-                } else if (operation == "sum") {
-                    cout << begin.sum() << endl;
+                    cout << begin.median() << endl;
                 } else if (operation == "ordered") {
                     begin.ordered(sort_ascending);
                 } else if (operation != "begin") {
-                    cout << "ERROR: Unknown operation" << endl;
+                    print_as_error("Unknown operation");
                     break;
                 }
             } else {
@@ -390,6 +438,13 @@ int main() {
                     print_array(sizes, copy_list.size());
 
                     delete [] sizes;
+                } else if (operation == "sums") {
+                    int* sums = new int[copy_list.size()];
+                    copy_list.sums(sums);
+
+                    print_array(sums, copy_list.size());
+
+                    delete [] sums;
                 } else if (operation == "averages") {
                     double* averages = new double[copy_list.size()];
                     copy_list.averages(averages);
@@ -404,13 +459,6 @@ int main() {
                     print_array(medians, copy_list.size());
 
                     delete [] medians;
-                } else if (operation == "sums") {
-                    int* sums = new int[copy_list.size()];
-                    copy_list.sums(sums);
-
-                    print_array(sums, copy_list.size());
-
-                    delete [] sums;
                 } else if (operation == "mul") {
                     copy_list *= to_int(parts.at(1));
                 } else if (operation == "add") {
@@ -418,7 +466,7 @@ int main() {
                 } else if (operation == "ordered") {
                     copy_list.ordered(sort_ascending);
                 } else {
-                    cout << "ERROR: Unknown operation" << endl;
+                    print_as_error("Unknown operation");
                     break;
                 }
             }
