@@ -189,7 +189,7 @@ public:
 
         ArrayNode *current = other.head_->next_;
         for (int i = 0; i < other.size_; ++i) {
-            int *new_data = new int[current->size_];
+            int* new_data = new int[current->size_];
             for (int j = 0; j < current->size_; ++j) {
                 new_data[j] = current->data_[j];
             }
@@ -209,7 +209,7 @@ public:
 
             ArrayNode *current = other.head_->next_;
             for (int i = 0; i < other.size_; ++i) {
-                int *new_data = new int[current->size_];
+                int* new_data = new int[current->size_];
                 for (int j = 0; j < current->size_; ++j) {
                     new_data[j] = current->data_[j];
                 }
@@ -220,6 +220,10 @@ public:
         }
 
         return *this;
+    }
+
+    ~ListOfArrays() {
+        delete head_;
     }
 
     Iterator begin() {
@@ -298,6 +302,8 @@ public:
             }
 
             sorted_list.push(new_array, 0, size);
+
+            delete current;
         }
         *this = sorted_list;
 
@@ -346,8 +352,7 @@ istream& operator>>(istream& in, ListOfArrays& list) {
     for (auto it = tokens.begin(); it != tokens.end(); ++it) {
         istringstream token_stream(*it);
 
-        const size_t size = (*it).size();
-        int* arr = new int[size];
+        int* arr = new int[(*it).size() / 2 + 1];
         int i = 0;
 
         int value;
