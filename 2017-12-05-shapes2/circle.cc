@@ -19,6 +19,10 @@ void Circle::set_radius(double radius) {
     radius_ = radius;
 }
 
+void Circle::set_center(Point& point) {
+    center_ = point;
+}
+
 void Circle::draw() const {
     std::cout << "Circle(" << center_ << "; " << radius_ << ")" << std::endl;
 }
