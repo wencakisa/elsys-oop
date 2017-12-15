@@ -121,6 +121,10 @@ public:
     }
 
     bool can_play() const {
+        return total_cards_ <= size();
+    }
+
+    bool can_deal() const {
         return cards_in_hand_ <= size();
     }
 
@@ -314,7 +318,7 @@ public:
         if (*deck == nullptr) {
             cout << "ERROR: No deck" << endl;
         } else {
-            if ((*deck)->can_play()) {
+            if ((*deck)->can_deal()) {
                 execute(*deck);
             } else {
                 cout << "ERROR: Not enough cards in deck" << endl;
