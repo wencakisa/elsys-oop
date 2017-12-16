@@ -21,6 +21,11 @@ vector<string> split_into_tokens(const string& str, const char& delimiter) {
     return tokens;
 }
 
+template <class T>
+bool contains(const vector<T>& haystack, const T& needle) {
+    return std::find(haystack.begin(), haystack.end(), needle) != haystack.end();
+}
+
 class Card {
     string suit_;
     string rank_;
@@ -51,10 +56,11 @@ public:
     }
 
     class Comparator {
-        vector<string> powers_;
+        vector<string> suits_powers_;
+        vector<string> ranks_powers_;
     public:
-        Comparator(const vector<string>& powers)
-        : powers_(powers)
+        Comparator(const vector<string>& suits_powers, const vector<string>& ranks_powers)
+        : suits_powers_(suits_powers), ranks_powers_(ranks_powers)
         {}
 
         bool operator()(const Card& a, const Card& b) {
@@ -62,16 +68,24 @@ public:
         }
 
     private:
-        bool greater_card_ranks(const string& rank1, const string& rank2) {
-            return find(powers_.begin(), powers_.end(), rank1) > find(powers_.begin(), powers_.end(), rank2);
+        bool greater(const string& a, const string& b, const vector<string>& vec) {
+            return std::find(vec.begin(), vec.end(), a) > std::find(vec.begin(), vec.end(), b);
+        }
+
+        bool greater_suits(const string& suit1, const string& suit2) {
+            return greater(suit1, suit2, suits_powers_);
+        }
+
+        bool greater_ranks(const string& rank1, const string& rank2) {
+            return greater(rank1, rank2, ranks_powers_);
         }
 
         bool greater_cards(const Card& a, const Card& b) {
             if (a.get_suit() == b.get_suit()) {
-                return greater_card_ranks(a.get_rank(), b.get_rank());
+                return greater_ranks(a.get_rank(), b.get_rank());
             }
 
-            return a.get_suit() > b.get_suit();
+            return greater_suits(a.get_suit(), b.get_suit());
         }
     };
 };
@@ -94,9 +108,13 @@ protected:
     vector<Card> cards_;
 private:
     string name_;
+
     int total_cards_;
     int cards_in_hand_;
+
     vector<string> valid_ranks_;
+
+    static const vector<string> VALID_SUITS_;
 public:
     Deck(
         vector<Card> cards,
@@ -165,25 +183,30 @@ public:
     }
 
     void sort() {
-        std::sort(cards_.begin(), cards_.end(), Card::Comparator(valid_ranks_));
+        std::sort(cards_.begin(), cards_.end(), Card::Comparator(VALID_SUITS_, valid_ranks_));
     }
 
 private:
     static vector<Card> filter_cards(vector<Card> cards, const vector<string>& valid_ranks) {
         auto it = cards.begin();
         while (it != cards.end()) {
-            auto rank_pos = find(valid_ranks.begin(), valid_ranks.end(), (*it).get_rank());
+            bool contains_suit = contains(VALID_SUITS_, (*it).get_suit());
+            bool contains_rank = contains(valid_ranks, (*it).get_rank());
 
-            if (rank_pos == valid_ranks.end()) {
-                it = cards.erase(it);
-            } else {
+            if (contains_suit && contains_rank) {
                 ++it;
+            } else {
+                it = cards.erase(it);
             }
         }
 
         return cards;
     }
 };
+
+const vector<string> Deck::VALID_SUITS_ { "C", "D", "H", "S" };
+
+// -----------------------------------------------------------------------------
 
 class War : public Deck {
     static const int TOTAL_CARDS_ = 52;
@@ -195,7 +218,11 @@ public:
     {}
 };
 
-const vector<string> War::VALID_RANKS_ { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
+const vector<string> War::VALID_RANKS_ {
+    "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"
+};
+
+// -----------------------------------------------------------------------------
 
 class Belote : public Deck {
     static const int TOTAL_CARDS_ = 32;
@@ -207,7 +234,11 @@ public:
     {}
 };
 
-const vector<string> Belote::VALID_RANKS_ { "7", "8", "9", "J", "Q", "K", "10", "A" };
+const vector<string> Belote::VALID_RANKS_ {
+    "7", "8", "9", "J", "Q", "K", "10", "A"
+};
+
+// -----------------------------------------------------------------------------
 
 class Santase : public Deck {
     static const int TOTAL_CARDS_ = 24;
@@ -219,7 +250,9 @@ public:
     {}
 };
 
-const vector<string> Santase::VALID_RANKS_ { "9", "J", "Q", "K", "10", "A" };
+const vector<string> Santase::VALID_RANKS_ {
+    "9", "J", "Q", "K", "10", "A"
+};
 
 // -----------------------------------------------------------------------------
 
@@ -236,6 +269,8 @@ public:
 
     virtual void eval(Deck** deck) = 0;
 };
+
+// -----------------------------------------------------------------------------
 
 class DeckCreatorOperation : public Operation {
     vector<Card> cards_;
