@@ -6,8 +6,6 @@
 
 using namespace std;
 
-#define STOP_WORD "quit"
-
 vector<string> split_into_tokens(const string& str) {
     istringstream in(str);
 
@@ -483,15 +481,15 @@ public:
         return nullptr;
     }
 
-    void play() {
+    void play(istream& in, ostream& out, const string& stop_word) {
         Deck* deck = nullptr;
         string token;
 
         while (true) {
-            cout << "> ";
-            cin >> token;
+            out << "> ";
+            in >> token;
 
-            if (token == STOP_WORD) {
+            if (token == stop_word) {
                 break;
             }
 
@@ -500,7 +498,7 @@ public:
             if (op != nullptr) {
                 op->eval(&deck);
             } else {
-                cout << "ERROR: Unknown operation" << endl;
+                out << "ERROR: Unknown operation" << endl;
             }
         }
     }
@@ -526,7 +524,7 @@ int main() {
     p.add_operation(new DrawBottomCardOperation());
     p.add_operation(new SortDeckOperation());
     p.add_operation(new ShuffleDeckOperation());
-    p.play();
+    p.play(cin, cout, "quit");
 
     return 0;
 }
