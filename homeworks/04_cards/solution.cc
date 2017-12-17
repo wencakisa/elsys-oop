@@ -105,16 +105,14 @@ ostream& operator<<(ostream& out, const vector<Card>& cards) {
 }
 
 class Deck {
-protected:
     vector<Card> cards_;
-private:
+    
     string name_;
-
+    
     int total_cards_;
     int cards_in_hand_;
-
-    vector<string> valid_ranks_;
-
+    
+    const vector<string> valid_ranks_;
     static const vector<string> VALID_SUITS_;
 public:
     Deck(
