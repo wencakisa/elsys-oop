@@ -50,9 +50,9 @@ public:
     static vector<Card> generate_vector(vector<string>& v) {
         vector<Card> result;
 
-        for (auto it = v.begin(); it != v.end(); ++it) {
-            string suit = (*it).substr(0, 1);
-            string rank = (*it).substr(1);
+        for (const string& str : v) {
+            string suit = str.substr(0, 1);
+            string rank = str.substr(1);
 
             result.push_back(Card(suit, rank));
         }
@@ -96,9 +96,9 @@ ostream& operator<<(ostream& out, const Card& card) {
     return out;
 }
 
-ostream& operator<<(ostream& out, const vector<Card>& v) {
-    for (auto it = v.begin(); it != v.end(); ++it) {
-        out << *it << " ";
+ostream& operator<<(ostream& out, const vector<Card>& cards) {
+    for (const Card& card : cards) {
+        out << card << " ";
     }
 
     return out;
@@ -174,13 +174,11 @@ public:
     vector<Card> deal() {
         vector<Card> result(cards_.begin(), cards_.begin() + cards_in_hand_);
         cards_.erase(cards_.begin(), cards_.begin() + cards_in_hand_);
-
         return result;
     };
 
     void shuffle() {
-        auto rng = std::default_random_engine {};
-        std::shuffle(cards_.begin(), cards_.end(), rng);
+        std::shuffle(cards_.begin(), cards_.end(), std::default_random_engine());
     }
 
     void sort() {
@@ -194,10 +192,7 @@ private:
                 cards.begin(),
                 cards.end(),
                 [valid_ranks](const Card& c) {
-                    return !(
-                        contains(VALID_SUITS_, c.get_suit()) &&
-                        contains(valid_ranks, c.get_rank())
-                    );
+                    return !(contains(VALID_SUITS_, c.get_suit()) && contains(valid_ranks, c.get_rank()));
                 }
             ),
             cards.end()
@@ -221,9 +216,7 @@ public:
     {}
 };
 
-const vector<string> War::VALID_RANKS_ {
-    "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"
-};
+const vector<string> War::VALID_RANKS_ { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
 
 // -----------------------------------------------------------------------------
 
@@ -237,9 +230,7 @@ public:
     {}
 };
 
-const vector<string> Belote::VALID_RANKS_ {
-    "7", "8", "9", "J", "Q", "K", "10", "A"
-};
+const vector<string> Belote::VALID_RANKS_ { "7", "8", "9", "J", "Q", "K", "10", "A" };
 
 // -----------------------------------------------------------------------------
 
@@ -253,9 +244,7 @@ public:
     {}
 };
 
-const vector<string> Santase::VALID_RANKS_ {
-    "9", "J", "Q", "K", "10", "A"
-};
+const vector<string> Santase::VALID_RANKS_ { "9", "J", "Q", "K", "10", "A" };
 
 // -----------------------------------------------------------------------------
 
