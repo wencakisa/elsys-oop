@@ -7,9 +7,8 @@
 using namespace std;
 
 #define STOP_WORD "quit"
-#define DECK_DELIMITER ' '
 
-vector<string> split_into_tokens(const string& str, const char& delimiter) {
+vector<string> split_into_tokens(const string& str) {
     istringstream in(str);
 
     vector<string> tokens;
@@ -23,7 +22,15 @@ vector<string> split_into_tokens(const string& str, const char& delimiter) {
 
 template <class T>
 bool contains(const vector<T>& haystack, const T& needle) {
-    return std::find(haystack.begin(), haystack.end(), needle) != haystack.end();
+    return (
+        !haystack.empty() &&
+        std::find(haystack.begin(), haystack.end(), needle) != haystack.end()
+    );
+}
+
+template <class T>
+bool greater_index(const vector<T>& haystack, const T& a, const T&b) {
+    return std::find(haystack.begin(), haystack.end(), a) > std::find(haystack.begin(), haystack.end(), b);
 }
 
 class Card {
@@ -68,16 +75,12 @@ public:
         }
 
     private:
-        bool greater(const string& a, const string& b, const vector<string>& vec) {
-            return std::find(vec.begin(), vec.end(), a) > std::find(vec.begin(), vec.end(), b);
-        }
-
         bool greater_suits(const string& suit1, const string& suit2) {
-            return greater(suit1, suit2, suits_powers_);
+            return greater_index(suits_powers_, suit1, suit2);
         }
 
         bool greater_ranks(const string& rank1, const string& rank2) {
-            return greater(rank1, rank2, ranks_powers_);
+            return greater_index(ranks_powers_, rank1, rank2);
         }
 
         bool greater_cards(const Card& a, const Card& b) {
@@ -188,17 +191,19 @@ public:
 
 private:
     static vector<Card> filter_cards(vector<Card> cards, const vector<string>& valid_ranks) {
-        auto it = cards.begin();
-        while (it != cards.end()) {
-            bool contains_suit = contains(VALID_SUITS_, (*it).get_suit());
-            bool contains_rank = contains(valid_ranks, (*it).get_rank());
-
-            if (contains_suit && contains_rank) {
-                ++it;
-            } else {
-                it = cards.erase(it);
-            }
-        }
+        cards.erase(
+            std::remove_if(
+                cards.begin(),
+                cards.end(),
+                [valid_ranks](const Card& c) {
+                    return !(
+                        contains(VALID_SUITS_, c.get_suit()) &&
+                        contains(valid_ranks, c.get_rank())
+                    );
+                }
+            ),
+            cards.end()
+        );
 
         return cards;
     }
@@ -469,9 +474,9 @@ public:
     }
 
     Operation* get_operation(const string& name) {
-        for(auto it = operations_.begin(); it != operations_.end(); ++it) {
-            if (name == (*it)->get_name()) {
-                return *it;
+        for (const auto& operation : operations_) {
+            if (operation->get_name() == name) {
+                return operation;
             }
         }
 
@@ -506,7 +511,7 @@ int main() {
     cout << "> ";
     getline(cin, deck_str);
 
-    vector<string> splitted_deck = split_into_tokens(deck_str, DECK_DELIMITER);
+    vector<string> splitted_deck = split_into_tokens(deck_str);
     vector<Card> cards = Card::generate_vector(splitted_deck);
 
     Player p;
