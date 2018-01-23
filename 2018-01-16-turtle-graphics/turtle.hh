@@ -17,8 +17,6 @@ public:
     virtual ~Turtle();
     virtual Turtle& setup();
 
-    bool is_setup() const;
-
     // Getters
     double get_width() const;
     double get_height() const;

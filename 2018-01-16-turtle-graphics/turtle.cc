@@ -11,17 +11,9 @@ Turtle::Turtle(double width, double height)
 
 Turtle::~Turtle() {}
 
-// TODO: Implement these methods
-
 Turtle& Turtle::setup() {
     return *this;
 }
-
-bool Turtle::is_setup() const {
-    return true;
-}
-
-// ----------------------------
 
 double Turtle::get_width() const {
     return width_;
