@@ -1,13 +1,17 @@
 #include <iostream>
 
 #include "ps_turtle.hh"
-#include "hilbert_curve.hh"
 
 using namespace std;
 
 int main() {
-    HilbertCurve curve(1, 20, new PSTurtle(500, 500));
-    curve.draw();
+    PSTurtle turtle(500, 500);
+
+    turtle.setup()
+        .pendown()
+        .pensize(5.0)
+        .pencolor(Color::gray(0.5))
+        .forward(100);
 
     return 0;
 }

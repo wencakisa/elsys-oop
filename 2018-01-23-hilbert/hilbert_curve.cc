@@ -46,9 +46,7 @@ void HilbertCurve::right(int order) {
 }
 
 void HilbertCurve::draw() {
-    turtle_->moveto(Point(0, turtle_->get_width()))
-        .right(90)
-        .pendown();
+    turtle_->setup().pendown().right(90);
 
-    left(order_);
+    right(order_);
 }
