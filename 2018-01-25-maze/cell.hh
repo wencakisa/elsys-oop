@@ -16,6 +16,11 @@ public:
 
     // -----------------------------------------
 
+    int row() const;
+    int col() const;
+
+    // -----------------------------------------
+
     bool is_visited() const;
     bool has_wall(Direction dir) const;
 

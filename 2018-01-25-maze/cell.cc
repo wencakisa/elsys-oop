@@ -12,6 +12,16 @@ Cell::Cell(int row, int col)
 
 // -----------------------------------------
 
+int Cell::row() const {
+    return row_;
+}
+
+int Cell::col() const {
+    return col_;
+}
+
+// -----------------------------------------
+
 bool Cell::is_visited() const {
     return visited_;
 }
