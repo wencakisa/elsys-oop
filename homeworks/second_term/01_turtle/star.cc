@@ -1,3 +1,14 @@
+// -------------------------------------------
+// NAME: Vencislav Tashev
+// CLASS: XIa
+// NUMBER: 4
+// PROBLEM: #1
+// FILE NAME: star.cc
+// FILE PURPOSE:
+//     Implementation of the Star class
+//     defined in ./star.hh
+// -------------------------------------------
+
 #include "star.hh"
 
 Star::Star(Turtle* turtle, int side_length, const Point& center)

@@ -1,3 +1,14 @@
+// -------------------------------------------
+// NAME: Vencislav Tashev
+// CLASS: XIa
+// NUMBER: 4
+// PROBLEM: #1
+// FILE NAME: axis.cc
+// FILE PURPOSE:
+//     Implementation of the Axis class
+//     defined in ./axis.hh
+// -------------------------------------------
+
 #include "axis.hh"
 
 Axis::Axis(Turtle* turtle, int side_length, const Point& center)

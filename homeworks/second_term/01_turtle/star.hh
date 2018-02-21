@@ -1,3 +1,18 @@
+// -------------------------------------------
+// NAME: Vencislav Tashev
+// CLASS: XIa
+// NUMBER: 4
+// PROBLEM: #1
+// FILE NAME: star.hh
+// FILE PURPOSE:
+//     Class used for drawing a 6-sided star
+//
+//     It inherits from the base
+//     Figure class from ./figure.hh
+//
+//     Implementing it's virtual draw() method
+// -------------------------------------------
+
 #ifndef STAR_HH_
 #define STAR_HH_
 

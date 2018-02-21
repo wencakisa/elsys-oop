@@ -1,3 +1,18 @@
+// -------------------------------------------
+// NAME: Vencislav Tashev
+// CLASS: XIa
+// NUMBER: 4
+// PROBLEM: #1
+// FILE NAME: hexagon_main.cc
+// FILE PURPOSE:
+//     The main program used for
+//     drawing the Hexagon.
+//
+//     Based on command line parameters,
+//     it draws a hexagon and outputs it
+//     to a desired format.
+// -------------------------------------------
+
 #include <iostream>
 #include <cstring>
 #include <cassert>

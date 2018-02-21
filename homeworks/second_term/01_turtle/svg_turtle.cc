@@ -1,3 +1,14 @@
+// -------------------------------------------
+// NAME: Vencislav Tashev
+// CLASS: XIa
+// NUMBER: 4
+// PROBLEM: #1
+// FILE NAME: svg_turtle.cc
+// FILE PURPOSE:
+//     Implementation of the SVGTurtle class
+//     defined in ./svg_turtle.hh
+// -------------------------------------------
+
 #include <iostream>
 #include <sstream>
 

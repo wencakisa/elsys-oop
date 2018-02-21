@@ -1,3 +1,17 @@
+// -------------------------------------------
+// NAME: Vencislav Tashev
+// CLASS: XIa
+// NUMBER: 4
+// PROBLEM: #1
+// FILE NAME: figure.hh
+// FILE PURPOSE:
+//     Base class used for drawing Figures
+//
+//     Contains only one pure abstract method
+//     void draw()
+//     which should be overriden in children
+// -------------------------------------------
+
 #ifndef FIGURE_HH_
 #define FIGURE_HH_
 

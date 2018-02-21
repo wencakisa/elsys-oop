@@ -1,3 +1,14 @@
+// -------------------------------------------
+// NAME: Vencislav Tashev
+// CLASS: XIa
+// NUMBER: 4
+// PROBLEM: #1
+// FILE NAME: hexagon.cc
+// FILE PURPOSE:
+//     Implementation of the Hexagon class
+//     defined in ./hexagon.hh
+// -------------------------------------------
+
 #include "hexagon.hh"
 
 Hexagon::Hexagon(Turtle* turtle, int side_length, const Point& center)

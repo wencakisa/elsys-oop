@@ -1,3 +1,18 @@
+// -------------------------------------------
+// NAME: Vencislav Tashev
+// CLASS: XIa
+// NUMBER: 4
+// PROBLEM: #1
+// FILE NAME: hexagon.hh
+// FILE PURPOSE:
+//     Class used for drawing a hexagon
+//
+//     It inherits from the base
+//     Figure class from ./figure.hh
+//
+//     Implementing it's virtual draw() method
+// -------------------------------------------
+
 #ifndef HEXAGON_HH_
 #define HEXAGON_HH_
 
