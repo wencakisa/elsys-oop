@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7539c730-c96d-4b5f-939f-8bb71e896324" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/ConditionalStatements.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/CurrencyFormatter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/DataTypes.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/DateAndTime.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/EndOfFile.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/IntegerToString.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/Loops.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/LoopsExtended.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/OutputFormatting.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/ScannerExercise.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../2018-02-12-hello-java/src/StdinAndStdout.java" />
-      <change beforePath="$PROJECT_DIR$/../2018-01-25-maze/board.cc" afterPath="$PROJECT_DIR$/../2018-01-25-maze/board.cc" />
-      <change beforePath="$PROJECT_DIR$/../2018-01-25-maze/board.hh" afterPath="$PROJECT_DIR$/../2018-01-25-maze/board.hh" />
-      <change beforePath="$PROJECT_DIR$/../2018-01-25-maze/cell.cc" afterPath="$PROJECT_DIR$/../2018-01-25-maze/cell.cc" />
-      <change beforePath="$PROJECT_DIR$/../2018-01-25-maze/cell.hh" afterPath="$PROJECT_DIR$/../2018-01-25-maze/cell.hh" />
-      <change beforePath="$PROJECT_DIR$/../2018-01-25-maze/main.cc" afterPath="$PROJECT_DIR$/../2018-01-25-maze/main.cc" />
-      <change beforePath="$PROJECT_DIR$/../2018-01-25-maze/maze" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../homeworks/01_numbers/solution.cc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../homeworks/02_rationals/solution.cc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../homeworks/03_lists_and_arrays/solution.cc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../homeworks/04_cards/solution.cc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../homeworks/second_term/01_turtle/Makefile" afterPath="$PROJECT_DIR$/../homeworks/second_term/01_turtle/Makefile" />
+      <change beforePath="$PROJECT_DIR$/../homeworks/second_term/01_turtle/sierpinski.cc" afterPath="$PROJECT_DIR$/../homeworks/second_term/01_turtle/sierpinski.cc" />
+      <change beforePath="$PROJECT_DIR$/../homeworks/second_term/01_turtle/sierpinski.hh" afterPath="$PROJECT_DIR$/../homeworks/second_term/01_turtle/sierpinski.hh" />
+      <change beforePath="$PROJECT_DIR$/../homeworks/second_term/01_turtle/sierpinski_main.cc" afterPath="$PROJECT_DIR$/../homeworks/second_term/01_turtle/sierpinski_main.cc" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/src/org/elsys/Tokens.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -86,8 +70,8 @@
       <file leaf-file-name="SyntaxChecker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/SyntaxChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,7 +135,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -176,6 +159,7 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -333,10 +317,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="55" width="1920" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -358,6 +342,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -371,6 +356,54 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/Palindrome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/Anagrams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/Tokens.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/SubstringComparisons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="45" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/SyntaxChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/SubstringComparisons.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -463,15 +496,15 @@
     <entry file="file://$PROJECT_DIR$/src/org/elsys/Tokens.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/SyntaxChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
