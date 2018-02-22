@@ -14,7 +14,6 @@
 // -------------------------------------------
 
 #include <iostream>
-#include <cstring>
 #include <cassert>
 
 #include "turtle.hh"
@@ -23,6 +22,7 @@
 #include "hexagon.hh"
 
 #define OUTPUT_FORMAT_INDEX 1
+
 #define EPS_FORMAT_STRING "eps"
 #define SVG_FORMAT_STRING "svg"
 
@@ -34,13 +34,13 @@ using namespace std;
 int main(int argc, char* argv[]) {
     assert(argc > 1);
 
-    const char* output_format = argv[OUTPUT_FORMAT_INDEX];
+    string output_format = argv[OUTPUT_FORMAT_INDEX];
 
     Turtle* t = NULL;
 
-    if (!strcmp(output_format, EPS_FORMAT_STRING)) {
+    if (output_format == EPS_FORMAT_STRING) {
         t = new PSTurtle(CANVAS_DIMENSION, CANVAS_DIMENSION);
-    } else if (!strcmp(output_format, SVG_FORMAT_STRING)) {
+    } else if (output_format == SVG_FORMAT_STRING) {
         t = new SVGTurtle(CANVAS_DIMENSION, CANVAS_DIMENSION);
     }
 

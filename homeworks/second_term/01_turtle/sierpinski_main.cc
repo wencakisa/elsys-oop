@@ -14,8 +14,7 @@
 // -------------------------------------------
 
 #include <iostream>
-#include <cstring>
-#include <cstdio>
+#include <sstream>
 #include <cassert>
 
 #include "turtle.hh"
@@ -36,13 +35,13 @@ using namespace std;
 int main(int argc, char* argv[]) {
     assert(argc > 2);
 
-    const char* output_format = argv[OUTPUT_FORMAT_INDEX];
+    string output_format = argv[OUTPUT_FORMAT_INDEX];
 
     Turtle* t = NULL;
 
-    if (!strcmp(output_format, EPS_FORMAT_STRING)) {
+    if (output_format == EPS_FORMAT_STRING) {
         t = new PSTurtle(CANVAS_DIMENSION, CANVAS_DIMENSION);
-    } else if (!strcmp(output_format, SVG_FORMAT_STRING)) {
+    } else if (output_format == SVG_FORMAT_STRING) {
         t = new SVGTurtle(CANVAS_DIMENSION, CANVAS_DIMENSION);
     }
 
@@ -51,9 +50,10 @@ int main(int argc, char* argv[]) {
     Point center(CANVAS_DIMENSION / 2, CANVAS_DIMENSION / 2);
 
     int order;
-    sscanf(argv[ORDER_INDEX], "%d", &order);
+    istringstream ss(argv[ORDER_INDEX]);
+    ss >> order;
 
-    assert(order > 0 && order < 8);
+    assert(order > 0 && order < 80);
 
     Sierpinski curve(t, LINE_LENGTH, center, order);
     curve.draw();
