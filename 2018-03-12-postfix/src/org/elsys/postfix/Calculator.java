@@ -1,66 +1,129 @@
 package org.elsys.postfix;
 
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.*;
+import java.util.stream.Collectors;
 
-import org.elsys.postfix.operation.Operation;
+import org.elsys.postfix.operations.*;
 
 public class Calculator {
 
-    private InputStream in;
-    private OutputStream out;
+	private Map<String, Operation> operations = new HashMap<>();
 
-    private Map<String, Operation> operations = new HashMap<>();
-    private List<Double> values = new ArrayList<>();
+	private List<Double> stack = new LinkedList<>();
 
-    public Calculator(InputStream in, OutputStream out) {
-        this.in = in;
-        this.out = out;
-    }
+	private InputStream in;
 
-    public void addOperation(Operation operation) {
-        operations.put(operation.getName(), operation);
-    }
+	private PrintStream out;
+	
+	public Calculator(InputStream in, PrintStream out) {
+		this.in = in;
+		this.out = out;
 
-    public Operation getOperation(String symbol) {
-        return operations.get(symbol);
-    }
+		addOperation(new Negate(this));
+		addOperation(new Duplicate(this));
+		addOperation(new Sin(this));
+		addOperation(new Cos(this));
+		addOperation(new Plus(this));
+		addOperation(new Minus(this));
+		addOperation(new Multiply(this));
+		addOperation(new Divide(this));
+		addOperation(new NegativeMultiply(this));
+		addOperation(new Swap(this));
+		addOperation(new Rot3(this));
+	}
 
-    public double popValue() {
-        return values.remove(values.size() - 1);
-    }
+	public void run() {
+		String input;
 
-    public void run(String quitWord) {
-        Scanner scanner = new Scanner(in);
-        PrintStream printOut = new PrintStream(out);
+		try (Scanner scanner = new Scanner(in)) {
+			while (scanner.hasNext()) {
+				out.print(stack.size() + ": ");
+				input = scanner.next();
 
-        while (true) {
-            printOut.printf("(%d): ", values.size());
+                if (isDouble(input)) {
+					stack.add(Double.valueOf(input));
+				} else if (isMacroDefinition(input)) {
+                    String macroName = input.split(CompositeOperation.MACRO_DEFINITION_START + CompositeOperation.MACRO_DEFINITION_START)[1];
 
-            String line = scanner.nextLine();
-
-            if (line.equals(quitWord)) {
-                break;
-            }
-
-            try {
-                double value = Double.valueOf(line);
-
-                values.add(value);
-            } catch (NumberFormatException nfe) {
-                Operation operation = getOperation(line);
-
-                if (operation != null) {
-                    double value = operation.execute();
-                    values.add(value);
-
-                    printOut.println(value);
+                    addMacro(scanner, macroName);
                 } else {
-                    printOut.println("Unknown operation");
+                    Operation operation = this.getOperation(input);
+
+                    if (operation != null) {
+                        operation.calculate();
+                    } else {
+                        throw new UnsupportedOperationException();
+                    }
                 }
-            }
-        }
+			}
+		}
+	}
+
+	private static boolean isDouble(String input) {
+		try {
+			Double.valueOf(input);
+		} catch (NumberFormatException e) {
+			return false;
+		}
+		return true;
+	}
+
+	private static boolean isMacroDefinition(String input) {
+	    return input.startsWith(CompositeOperation.MACRO_DEFINITION_START);
     }
+
+	public void addOperation(Operation operation) {
+		operations.put(operation.getToken(), operation);
+	}
+
+	public Operation getOperation(String token) {
+		return operations.get(token);
+	}
+
+    public void addMacro(Scanner scanner, String macroName) {
+        CompositeOperation macro = new CompositeOperation(this, macroName);
+
+        while (!scanner.hasNext(CompositeOperation.MACRO_DEFINITION_END)) {
+            String input = scanner.next();
+
+            Operation operation = this.getOperation(input);
+
+            if (isDouble(input)) {
+                operation = new Literal(this, Double.valueOf(input));
+            }
+
+            macro.addOperation(operation);
+        }
+
+        scanner.next();
+
+        this.addOperation(macro);
+    }
+
+	public Double popValue() {
+		int lastIndex = stack.size() - 1;
+
+		if (lastIndex < 0) {
+		    throw new EmptyStackException();
+        }
+
+		Double value = stack.get(lastIndex);
+		stack.remove(lastIndex);
+		return value;
+	}
+
+	public Double lastValue() {
+		return stack.get(stack.size() - 1);
+	}
+
+	public void addValue(double value) {
+		out.println(value);
+		stack.add(value);
+	}
+
+	int stackSize() {
+		return stack.size();
+	}
 }
