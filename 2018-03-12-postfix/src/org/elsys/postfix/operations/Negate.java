@@ -4,8 +4,10 @@ import org.elsys.postfix.Calculator;
 
 public class Negate extends UnaryOperation implements Operation {
 
+	private static final String NEGATE_TOKEN = "neg";
+
 	public Negate(Calculator calculator) {
-		super(calculator, "neg");
+		super(calculator, NEGATE_TOKEN);
 	}
 	
 	@Override

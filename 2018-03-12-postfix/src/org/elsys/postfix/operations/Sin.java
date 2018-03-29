@@ -3,8 +3,11 @@ package org.elsys.postfix.operations;
 import org.elsys.postfix.Calculator;
 
 public class Sin extends UnaryOperation implements Operation {
+
+    private static final String SIN_TOKEN = "sin";
+
     public Sin(Calculator calculator) {
-        super(calculator, "sin");
+        super(calculator, SIN_TOKEN);
     }
 
     @Override

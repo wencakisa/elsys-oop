@@ -2,37 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a653804-f743-4e94-a805-67502e510f9e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Literal.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/CalculatorAbstractTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/CompositeOperationTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/ConstantMacroTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/CosTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/DivisionTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/DuplicateTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/MinusTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/MultiplicationTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/NegateTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/PlusTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/SinTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/org.elsys.postfix/SquareMacroTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/2018-03-12-postfix.iml" afterPath="$PROJECT_DIR$/2018-03-12-postfix.iml" />
       <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/Calculator.class" afterPath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/Calculator.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operation/AbstractOperation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operation/Negate.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operation/Operation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operation/Square.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operation/UnaryOperation.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operations/BinaryOperation.class" afterPath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operations/BinaryOperation.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operations/TernaryOperation.class" afterPath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operations/TernaryOperation.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operations/UnaryOperation.class" afterPath="$PROJECT_DIR$/out/production/2018-03-12-postfix/org/elsys/postfix/operations/UnaryOperation.class" />
+      <change beforePath="$PROJECT_DIR$/out/test/2018-03-12-postfix/org/elsys/postfix/SquareMacroTest.class" afterPath="$PROJECT_DIR$/out/test/2018-03-12-postfix/org/elsys/postfix/SquareMacroTest.class" />
       <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/Calculator.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/Calculator.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/Main.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operation/AbstractOperation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operation/Negate.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operation/Operation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operation/Square.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operation/UnaryOperation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../2018-03-19-balls-and-boxes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../2018-03-19-balls-and-boxes/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/BinaryOperation.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/BinaryOperation.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Cos.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Cos.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Divide.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Divide.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Duplicate.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Duplicate.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Literal.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Literal.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Minus.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Minus.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Multiply.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Multiply.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Negate.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Negate.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/NegativeMultiply.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/NegativeMultiply.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Plus.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Plus.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Rot3.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Rot3.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Sin.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Sin.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Swap.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/Swap.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/TernaryOperation.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/TernaryOperation.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/postfix/operations/UnaryOperation.java" afterPath="$PROJECT_DIR$/src/org/elsys/postfix/operations/UnaryOperation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,59 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Calculator.java">
+      <file leaf-file-name="Divide.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Divide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-              <folding>
-                <element signature="e#2969#2970#0" expanded="true" />
-                <element signature="e#3010#3011#0" expanded="true" />
-                <element signature="e#3114#3115#0" expanded="true" />
-                <element signature="e#3140#3141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Literal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Literal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#350#351#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Plus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Plus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Swap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Swap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnaryOperation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/UnaryOperation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="195">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,16 +84,29 @@
         <option value="$PROJECT_DIR$/test/org.elsys.postfix/CalculatorAbstractTest.java" />
         <option value="$PROJECT_DIR$/2018-03-12-postfix.iml" />
         <option value="$PROJECT_DIR$/test/org.elsys.postfix/CosTest.java" />
-        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Minus.java" />
-        <option value="$PROJECT_DIR$/test/org.elsys.postfix/SquareMacroTest.java" />
-        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Literal.java" />
         <option value="$PROJECT_DIR$/test/org.elsys.postfix/ConstantMacroTest.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/CompositeOperation.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/postfix/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/BinaryOperation.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/TernaryOperation.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/UnaryOperation.java" />
+        <option value="$PROJECT_DIR$/test/org.elsys.postfix/SquareMacroTest.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Literal.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Cos.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Divide.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Duplicate.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Minus.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Multiply.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Negate.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/NegativeMultiply.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Sin.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Swap.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Rot3.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/postfix/operations/Plus.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="55" />
     <option name="width" value="1400" />
@@ -174,10 +130,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,10 +158,22 @@
               <item name="postfix" type="462c0819:PsiDirectoryNode" />
               <item name="operations" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="2018-03-12-postfix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-03-12-postfix" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018-03-12-postfix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2018-03-12-postfix" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="org.elsys.postfix" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,8 +343,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in 2018-03-12-postfix" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.org.elsys.postfix in 2018-03-12-postfix" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MainClass" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MainClass" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.org.elsys.postfix in 2018-03-12-postfix" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.SquareMacroTest.test" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.CompositeOperationTest" />
       </list>
@@ -400,23 +367,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_2018-03-12-postfix - 2018.03.21 at 19h 16m 02s.xml">
+    <history-entry file="All_in_2018-03-12-postfix - 2018.03.22 at 16h 05m 43s.xml">
       <configuration name="All in 2018-03-12-postfix" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SquareMacroTest_test - 2018.03.21 at 18h 57m 08s.xml">
-      <configuration name="SquareMacroTest.test" configurationId="JUnit" />
+    <history-entry file="All_in_2018-03-12-postfix - 2018.03.22 at 16h 07m 29s.xml">
+      <configuration name="All in 2018-03-12-postfix" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SquareMacroTest_test - 2018.03.21 at 18h 57m 43s.xml">
-      <configuration name="SquareMacroTest.test" configurationId="JUnit" />
+    <history-entry file="All_in_2018-03-12-postfix - 2018.03.22 at 16h 09m 45s.xml">
+      <configuration name="All in 2018-03-12-postfix" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SquareMacroTest_test - 2018.03.21 at 18h 57m 54s.xml">
-      <configuration name="SquareMacroTest.test" configurationId="JUnit" />
+    <history-entry file="All_in_2018-03-12-postfix - 2018.03.22 at 16h 12m 38s.xml">
+      <configuration name="All in 2018-03-12-postfix" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="org_elsys_postfix_in_2018-03-12-postfix - 2018.03.21 at 18h 58m 47s.xml">
-      <configuration name="org.elsys.postfix in 2018-03-12-postfix" configurationId="JUnit" />
+    <history-entry file="All_in_2018-03-12-postfix - 2018.03.22 at 16h 19m 58s.xml">
+      <configuration name="All in 2018-03-12-postfix" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="org_elsys_postfix_in_2018-03-12-postfix - 2018.03.21 at 19h 00m 20s.xml">
-      <configuration name="org.elsys.postfix in 2018-03-12-postfix" configurationId="JUnit" />
+    <history-entry file="All_in_2018-03-12-postfix - 2018.03.22 at 16h 20m 25s.xml">
+      <configuration name="All in 2018-03-12-postfix" configurationId="JUnit" />
     </history-entry>
     <history-entry file="org_elsys_postfix_in_2018-03-12-postfix - 2018.03.21 at 19h 00m 46s.xml">
       <configuration name="org.elsys.postfix in 2018-03-12-postfix" configurationId="JUnit" />
@@ -432,7 +399,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="55" width="1920" height="1050" extended-state="7" />
+    <frame x="260" y="55" width="1920" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -443,13 +410,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14375" sideWeight="0.49628845" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -461,6 +427,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -471,182 +438,55 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/UnaryOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Negate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/AbstractOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/UnaryOperation.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Square.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Negate.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/AbstractOperation.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Operation.java" />
     <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
           <folding>
-            <element signature="e#2969#2970#0" expanded="true" />
-            <element signature="e#3010#3011#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
+            <element signature="e#2889#2890#0" expanded="false" />
+            <element signature="e#2930#2931#0" expanded="false" />
+            <element signature="e#3034#3035#0" expanded="false" />
+            <element signature="e#3060#3061#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/UnaryOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Negate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/AbstractOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/UnaryOperation.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Square.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Negate.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/AbstractOperation.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Operation.java" />
     <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <element signature="e#2969#2970#0" expanded="true" />
-            <element signature="e#3010#3011#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
+            <element signature="e#2889#2890#0" expanded="false" />
+            <element signature="e#2930#2931#0" expanded="false" />
+            <element signature="e#3034#3035#0" expanded="false" />
+            <element signature="e#3060#3061#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Operation.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/UnaryOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Negate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/AbstractOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/UnaryOperation.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Square.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Negate.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/AbstractOperation.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operation/Operation.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Main.java" />
     <entry file="file://$PROJECT_DIR$/2018-03-12-postfix.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,17 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Sin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,15 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org.elsys.postfix/CompositeOperationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,7 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,7 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,15 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org.elsys.postfix/SquareMacroTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,95 +529,208 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Minus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/NegativeMultiply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Plus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Swap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/UnaryOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/CompositeOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+          <folding>
+            <element signature="e#2889#2890#0" expanded="false" />
+            <element signature="e#2930#2931#0" expanded="false" />
+            <element signature="e#3034#3035#0" expanded="false" />
+            <element signature="e#3060#3061#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/org.elsys.postfix/DuplicateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/org.elsys.postfix/SquareMacroTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/org.elsys.postfix/CompositeOperationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="68" lean-forward="true" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/AbstractOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/BinaryOperation.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/CompositeOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/UnaryOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/TernaryOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Swap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Cos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Sin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Rot3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Plus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/NegativeMultiply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Negate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Literal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="false" />
+            <element signature="e#462#463#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/Calculator.java">
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Minus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Multiply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Duplicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
           <folding>
-            <element signature="e#2969#2970#0" expanded="true" />
-            <element signature="e#3010#3011#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/postfix/operations/Divide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

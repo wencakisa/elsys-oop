@@ -3,8 +3,11 @@ package org.elsys.postfix.operations;
 import org.elsys.postfix.Calculator;
 
 public class Rot3 extends AbstractOperation implements Operation {
+
+    private static final String ROT3_TOKEN = "rot3";
+
     public Rot3(Calculator calculator) {
-        super(calculator, "rot3");
+        super(calculator, ROT3_TOKEN);
     }
 
     @Override

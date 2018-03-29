@@ -105,16 +105,12 @@ public class Calculator {
 	public Double popValue() {
 		int lastIndex = stack.size() - 1;
 
-		if (lastIndex < 0) {
-		    throw new EmptyStackException();
-        }
-
 		Double value = stack.get(lastIndex);
 		stack.remove(lastIndex);
 		return value;
 	}
 
-	public Double lastValue() {
+	Double lastValue() {
 		return stack.get(stack.size() - 1);
 	}
 
