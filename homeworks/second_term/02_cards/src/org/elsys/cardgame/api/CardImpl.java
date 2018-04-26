@@ -1,11 +1,11 @@
 package org.elsys.cardgame.api;
 
-public class PlayingCard implements Card {
+public class CardImpl implements Card {
 
     private Suit suit;
     private Rank rank;
 
-    public PlayingCard(Suit suit, Rank rank) {
+    public CardImpl(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
     }
@@ -34,7 +34,7 @@ public class PlayingCard implements Card {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        PlayingCard that = (PlayingCard) o;
+        CardImpl that = (CardImpl) o;
 
         if (suit != that.suit) return false;
         return rank == that.rank;

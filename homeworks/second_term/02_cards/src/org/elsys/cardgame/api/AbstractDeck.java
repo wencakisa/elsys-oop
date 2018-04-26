@@ -57,7 +57,7 @@ public abstract class AbstractDeck implements Deck {
         List<Card> dealCards = new ArrayList<>(cards.subList(0, handSize));
         cards.removeAll(dealCards);
 
-        return new HandOfCards(dealCards);
+        return new HandImpl(dealCards);
     }
 
     @Override

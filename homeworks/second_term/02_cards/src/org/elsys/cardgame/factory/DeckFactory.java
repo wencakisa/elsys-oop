@@ -12,7 +12,7 @@ public class DeckFactory {
 
         for (Suit s : Suit.values()) {
             for (Rank r : rankPowers) {
-                result.add(new PlayingCard(s, r));
+                result.add(new CardImpl(s, r));
             }
         }
 

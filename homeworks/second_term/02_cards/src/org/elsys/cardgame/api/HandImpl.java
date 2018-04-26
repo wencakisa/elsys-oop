@@ -2,11 +2,11 @@ package org.elsys.cardgame.api;
 
 import java.util.List;
 
-public class HandOfCards implements Hand {
+public class HandImpl implements Hand {
 
     private List<Card> cards;
 
-    public HandOfCards(List<Card> cards) {
+    public HandImpl(List<Card> cards) {
         this.cards = cards;
     }
 
