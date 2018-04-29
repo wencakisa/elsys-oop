@@ -1,6 +1,12 @@
 package org.elsys.cardgame.factory;
 
 import org.elsys.cardgame.api.*;
+import org.elsys.cardgame.api.card.Card;
+import org.elsys.cardgame.api.card.CardImpl;
+import org.elsys.cardgame.api.deck.BeloteDeck;
+import org.elsys.cardgame.api.deck.Deck;
+import org.elsys.cardgame.api.deck.SantaseDeck;
+import org.elsys.cardgame.api.deck.WarDeck;
 
 import java.util.List;
 import java.util.ArrayList;

@@ -5,9 +5,9 @@ import static org.junit.Assert.assertNotEquals;
 
 import java.util.List;
 
-import org.elsys.cardgame.api.Card;
-import org.elsys.cardgame.api.Deck;
-import org.elsys.cardgame.api.Hand;
+import org.elsys.cardgame.api.card.Card;
+import org.elsys.cardgame.api.deck.Deck;
+import org.elsys.cardgame.api.hand.Hand;
 import org.elsys.cardgame.api.Rank;
 import org.elsys.cardgame.api.Suit;
 import org.junit.Before;

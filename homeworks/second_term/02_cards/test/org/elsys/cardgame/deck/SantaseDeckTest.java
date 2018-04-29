@@ -3,7 +3,7 @@ package org.elsys.cardgame.deck;
 import java.util.Arrays;
 import java.util.List;
 
-import org.elsys.cardgame.api.Deck;
+import org.elsys.cardgame.api.deck.Deck;
 import org.elsys.cardgame.api.Rank;
 import org.elsys.cardgame.factory.DeckFactory;
 
