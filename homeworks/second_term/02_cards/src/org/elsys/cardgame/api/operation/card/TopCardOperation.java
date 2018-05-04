@@ -2,7 +2,7 @@ package org.elsys.cardgame.api.operation;
 
 import org.elsys.cardgame.api.deck.Deck;
 
-public class TopCardOperation extends SingleCardOperation {
+public class TopCardOperation extends CardOperation {
 
     public static final String NAME = "top_card";
 

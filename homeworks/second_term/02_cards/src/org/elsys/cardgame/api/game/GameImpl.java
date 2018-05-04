@@ -7,7 +7,7 @@ import org.elsys.cardgame.api.deck.Deck;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AbstractGame implements Game {
+public class GameImpl implements Game {
 
     private Deck deck;
 
@@ -15,7 +15,7 @@ public abstract class AbstractGame implements Game {
 
     private List<Operation> operations;
 
-    public AbstractGame(Deck deck) {
+    public GameImpl(Deck deck) {
         this.deck = deck;
         this.dealtHand = null;
         this.operations = new ArrayList<>();
@@ -38,15 +38,27 @@ public abstract class AbstractGame implements Game {
 
     @Override
     public void process(String command) {
-        for (Operation o : operations) {
-            if (o.getName().equals(command)) {
-                o.execute();
-            }
+        Operation operation = getOperation(command);
+
+        if (operation != null) {
+            operation.execute();
+        } else {
+            System.err.println("ERROR: Unknown operation");
         }
     }
 
     @Override
     public void addOperation(Operation operation) {
         this.operations.add(operation);
+    }
+
+    private Operation getOperation(String token) {
+        for (Operation o : operations) {
+            if (o.getName().equals(token)) {
+                return o;
+            }
+        }
+
+        return null;
     }
 }
