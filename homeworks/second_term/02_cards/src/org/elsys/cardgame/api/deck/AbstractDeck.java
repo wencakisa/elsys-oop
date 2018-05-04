@@ -1,5 +1,6 @@
 package org.elsys.cardgame.api.deck;
 
+import org.elsys.cardgame.api.Rank;
 import org.elsys.cardgame.api.card.Card;
 import org.elsys.cardgame.api.hand.Hand;
 import org.elsys.cardgame.api.hand.HandImpl;
@@ -8,26 +9,28 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class AbstractDeck implements Deck {
 
     private List<Card> cards;
 
-    private int totalCards;
+    private int deckSize;
 
     private int handSize;
 
-    public AbstractDeck(List<Card> cards, int totalCards, int handSize) {
-        this.cards = cards;
-        this.totalCards = totalCards;
-        this.handSize = handSize;
+    private List<Rank> rankPowers;
 
-        this.sort();
+    protected AbstractDeck(List<Card> cards, int deckSize, int handSize, List<Rank> rankPowers) {
+        this.cards = cards;
+        this.deckSize = deckSize;
+        this.handSize = handSize;
+        this.rankPowers = rankPowers;
     }
 
     @Override
     public boolean canPlay() {
-        return totalCards <= size();
+        return deckSize <= size();
     }
 
     @Override
@@ -80,11 +83,16 @@ public abstract class AbstractDeck implements Deck {
 
     @Override
     public void sort() {
-        cards.sort(Comparator.comparing(Card::getSuit).thenComparing(Card::getRank));
+        cards.sort(Comparator.comparing(Card::getSuit).thenComparing(card -> rankPowers.indexOf(card.getRank())));
     }
 
     @Override
     public void shuffle() {
         Collections.shuffle(cards);
+    }
+
+    @Override
+    public String toString() {
+        return this.cards.stream().map(Card::toString).collect(Collectors.joining(" "));
     }
 }

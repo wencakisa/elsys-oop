@@ -8,6 +8,7 @@ import org.elsys.cardgame.api.card.Card;
 import org.elsys.cardgame.api.card.CardException;
 import org.elsys.cardgame.api.deck.Deck;
 import org.elsys.cardgame.api.game.Game;
+import org.junit.Before;
 import org.junit.Test;
 
 public abstract class AbstractGameTest {
@@ -24,6 +25,7 @@ public abstract class AbstractGameTest {
 
 	public abstract int handSize();
 
+	@Before
 	public void before() {
 		Deck deck = defaultDeck();
 		deck.shuffle();
@@ -37,12 +39,12 @@ public abstract class AbstractGameTest {
 		assertNotNull(game.getDealtHand());
 		assertEquals(deckSize() - handSize(), game.getDeck().size());
 		List<Card> cards = game.getDealtHand().getCards();
-		assertEquals(clearDeck.subList(0, handSize()), cards);
+		assertEquals(defaultDeck().getCards().subList(0, handSize()), cards);
 
 		game.process("deal");
 		assertEquals(deckSize() - handSize() * 2, game.getDeck().size());
 		List<Card> handCards = game.getDealtHand().getCards();
-		assertEquals(clearDeck.subList(handSize(), handSize() * 2), handCards);
+		assertEquals(defaultDeck().getCards().subList(handSize(), handSize() * 2), handCards);
 	}
 
 	@Test(expected = CardException.class)
@@ -54,9 +56,9 @@ public abstract class AbstractGameTest {
 
 	@Test
 	public void testShuffle() {
-		assertEquals(clearDeck, game.getDeck().getCards());
+		assertEquals(defaultDeck().getCards(), game.getDeck().getCards());
 		game.process("shuffle");
-		assertNotEquals(clearDeck, game.getDeck().getCards());
+		assertNotEquals(defaultDeck().getCards(), game.getDeck().getCards());
 	}
 
 	@Test

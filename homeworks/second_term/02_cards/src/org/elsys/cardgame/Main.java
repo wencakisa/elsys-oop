@@ -1,34 +1,42 @@
 package org.elsys.cardgame;
 
+import org.elsys.cardgame.api.card.Card;
+import org.elsys.cardgame.api.card.CardImpl;
 import org.elsys.cardgame.api.deck.Deck;
+import org.elsys.cardgame.api.deck.SantaseDeck;
+import org.elsys.cardgame.api.deck.WarDeck;
 import org.elsys.cardgame.api.game.Game;
-import org.elsys.cardgame.api.operation.*;
-import org.elsys.cardgame.factory.DeckFactory;
-import org.elsys.cardgame.factory.GameFactory;
+import org.elsys.cardgame.api.game.GameImpl;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
+    // S9 SJ SQ DA H9 HJ CK SK S10 SA D9 DJ DQ DK D10 C10 CA HQ HK H10 HA C9 CJ CQ
+
 	public static void main(String[] args) {
-        Deck deck = DeckFactory.defaultWarDeck();
-
-		Game game = GameFactory.createWarGame(deck.getCards());
-		game.addOperation(new SizeOperation(game.getDeck()));
-		game.addOperation(new DrawTopCardOperation(game.getDeck()));
-		game.addOperation(new DrawBottomCardOperation(game.getDeck()));
-		game.addOperation(new TopCardOperation(game.getDeck()));
-		game.addOperation(new BottomCardOperation(game.getDeck()));
-		game.addOperation(new ShuffleOperation(game.getDeck()));
-		game.addOperation(new SortOperation(game.getDeck()));
-		game.addOperation(new DealOperation(game.getDeck()));
-
         Scanner in = new Scanner(System.in);
-		while (true) {
-            System.out.print("> ");
-		    String token = in.next();
 
-		    game.process(token);
+        // Reading and creating deck from string
+        System.out.print("> ");
+        String deckString = in.nextLine();
+        List<Card> cards = CardImpl.fromDeckString(deckString);
+
+        Deck deck = new SantaseDeck(cards);
+        Game game = new GameImpl(deck);
+
+        while (true) {
+            System.out.print("> ");
+            String token = in.nextLine();
+
+            if (token.equals("quit")) {
+                System.out.println("The end!");
+                return;
+            }
+
+            game.process(token);
         }
+
 	}
 }

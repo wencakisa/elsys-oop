@@ -10,13 +10,13 @@ import static org.elsys.cardgame.api.Rank.*;
 
 public class SantaseDeck extends AbstractDeck {
 
+    public static final int DECK_SIZE = 24;
+
+    public static final int HAND_SIZE = 6;
+
     public static List<Rank> RANK_POWERS = Arrays.asList(NINE, JACK, QUEEN, KING, TEN, ACE);
 
-    private static final int TOTAL_CARDS = 24;
-
-    private static final int HAND_SIZE = 6;
-
     public SantaseDeck(List<Card> cards) {
-        super(cards, TOTAL_CARDS, HAND_SIZE);
+        super(cards, DECK_SIZE, HAND_SIZE, RANK_POWERS);
     }
 }

@@ -1,7 +1,8 @@
-package org.elsys.cardgame.api.operation;
+package org.elsys.cardgame.api.operation.simple;
 
 import org.elsys.cardgame.api.deck.Deck;
 import org.elsys.cardgame.api.game.Game;
+import org.elsys.cardgame.api.operation.AbstractOperation;
 
 public class SizeOperation extends AbstractOperation {
 

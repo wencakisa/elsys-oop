@@ -30,4 +30,13 @@ public enum Rank {
 	public String toString() {
 		return symbol;
 	}
+
+	public static Rank getBySymbol(String symbol){
+		for (Rank r : Rank.values()) {
+			if (r.getSymbol().equals(symbol)) {
+				return r;
+			}
+		}
+		return null;
+	}
 }

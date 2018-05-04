@@ -1,9 +1,9 @@
 package org.elsys.cardgame.api.hand;
 
-import org.elsys.cardgame.api.card.Card;
-import org.elsys.cardgame.api.hand.Hand;
-
 import java.util.List;
+import java.util.stream.Collectors;
+
+import org.elsys.cardgame.api.card.Card;
 
 public class HandImpl implements Hand {
 
@@ -21,5 +21,10 @@ public class HandImpl implements Hand {
     @Override
     public int size() {
         return cards.size();
+    }
+
+    @Override
+    public String toString() {
+        return this.cards.stream().map(Card::toString).collect(Collectors.joining(" "));
     }
 }

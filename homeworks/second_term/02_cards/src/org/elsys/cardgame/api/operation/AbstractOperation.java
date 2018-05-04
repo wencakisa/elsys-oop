@@ -1,16 +1,16 @@
 package org.elsys.cardgame.api.operation;
 
-import org.elsys.cardgame.api.deck.Deck;
+import org.elsys.cardgame.api.game.Game;
 
 public abstract class AbstractOperation implements Operation {
 
     private String name;
 
-    protected Deck deck;
+    protected Game game;
 
-    public AbstractOperation(String name, Deck deck) {
+    public AbstractOperation(String name, Game game) {
         this.name = name;
-        this.deck = deck;
+        this.game = game;
     }
 
     @Override
