@@ -1,4 +1,4 @@
-package org.elsys.cardgame.api;
+package org.elsys.cardgame.api.card;
 
 public enum Rank {
 
@@ -37,6 +37,7 @@ public enum Rank {
 				return r;
 			}
 		}
+
 		return null;
 	}
 }

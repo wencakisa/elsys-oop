@@ -39,12 +39,12 @@ public abstract class AbstractGameTest {
 		assertNotNull(game.getDealtHand());
 		assertEquals(deckSize() - handSize(), game.getDeck().size());
 		List<Card> cards = game.getDealtHand().getCards();
-		assertEquals(defaultDeck().getCards().subList(0, handSize()), cards);
+		assertEquals(clearDeck.subList(0, handSize()), cards);
 
 		game.process("deal");
 		assertEquals(deckSize() - handSize() * 2, game.getDeck().size());
 		List<Card> handCards = game.getDealtHand().getCards();
-		assertEquals(defaultDeck().getCards().subList(handSize(), handSize() * 2), handCards);
+		assertEquals(clearDeck.subList(handSize(), handSize() * 2), handCards);
 	}
 
 	@Test(expected = CardException.class)
@@ -56,9 +56,9 @@ public abstract class AbstractGameTest {
 
 	@Test
 	public void testShuffle() {
-		assertEquals(defaultDeck().getCards(), game.getDeck().getCards());
+		assertEquals(clearDeck, game.getDeck().getCards());
 		game.process("shuffle");
-		assertNotEquals(defaultDeck().getCards(), game.getDeck().getCards());
+		assertNotEquals(clearDeck, game.getDeck().getCards());
 	}
 
 	@Test

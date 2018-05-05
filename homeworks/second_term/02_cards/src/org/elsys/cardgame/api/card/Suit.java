@@ -1,4 +1,4 @@
-package org.elsys.cardgame.api;
+package org.elsys.cardgame.api.card;
 
 public enum Suit {
 
@@ -28,6 +28,7 @@ public enum Suit {
 		        return s;
             }
 		}
+
 		return null;
 	}
 }

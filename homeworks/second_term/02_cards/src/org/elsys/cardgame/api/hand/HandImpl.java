@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.elsys.cardgame.api.card.Card;
+import org.elsys.cardgame.api.helper.Helper;
 
 public class HandImpl implements Hand {
 
@@ -25,6 +26,6 @@ public class HandImpl implements Hand {
 
     @Override
     public String toString() {
-        return this.cards.stream().map(Card::toString).collect(Collectors.joining(" "));
+        return Helper.cardListRepresentation(this.cards);
     }
 }

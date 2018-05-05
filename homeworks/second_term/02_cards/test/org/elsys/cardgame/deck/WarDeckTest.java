@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.elsys.cardgame.api.deck.Deck;
-import org.elsys.cardgame.api.Rank;
+import org.elsys.cardgame.api.card.Rank;
 import org.elsys.cardgame.factory.DeckFactory;
 
 public class WarDeckTest extends AbstractDeckTest {

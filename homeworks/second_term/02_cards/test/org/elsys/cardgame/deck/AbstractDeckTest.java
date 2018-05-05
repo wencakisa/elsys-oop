@@ -8,8 +8,8 @@ import java.util.List;
 import org.elsys.cardgame.api.card.Card;
 import org.elsys.cardgame.api.deck.Deck;
 import org.elsys.cardgame.api.hand.Hand;
-import org.elsys.cardgame.api.Rank;
-import org.elsys.cardgame.api.Suit;
+import org.elsys.cardgame.api.card.Rank;
+import org.elsys.cardgame.api.card.Suit;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -47,8 +47,8 @@ public abstract class AbstractDeckTest {
 		clearDeck.getCards().removeAll(hand.getCards());
 		assertEquals("Cards left in deck are correct", clearDeck.getCards(), deck.getCards());
 
-//        hand.getCards().addAll(deck.getCards());
-//		assertEquals("Cards in hand are correct", clearDeck.getCards(), hand.getCards());
+        hand.getCards().addAll(deck.getCards());
+		assertEquals("Cards in hand are correct", defaultDeck().getCards(), hand.getCards());
 	}
 
 	@Test

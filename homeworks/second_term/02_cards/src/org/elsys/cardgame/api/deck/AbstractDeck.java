@@ -1,9 +1,10 @@
 package org.elsys.cardgame.api.deck;
 
-import org.elsys.cardgame.api.Rank;
+import org.elsys.cardgame.api.card.Rank;
 import org.elsys.cardgame.api.card.Card;
 import org.elsys.cardgame.api.hand.Hand;
 import org.elsys.cardgame.api.hand.HandImpl;
+import org.elsys.cardgame.api.helper.Helper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -93,6 +94,6 @@ public abstract class AbstractDeck implements Deck {
 
     @Override
     public String toString() {
-        return this.cards.stream().map(Card::toString).collect(Collectors.joining(" "));
+        return Helper.cardListRepresentation(this.cards);
     }
 }

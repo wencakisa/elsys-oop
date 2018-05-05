@@ -1,5 +1,6 @@
 package org.elsys.cardgame.factory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.elsys.cardgame.api.card.Card;
@@ -17,14 +18,14 @@ public class GameFactory {
     }
 
 	public static Game createWarGame(List<Card> cards) {
-		return createGame(new WarDeck(cards));
+		return createGame(new WarDeck(new ArrayList<>(cards)));
 	}
 
 	public static Game createSantaseGame(List<Card> cards) {
-		return createGame(new SantaseDeck(cards));
+		return createGame(new SantaseDeck(new ArrayList<>(cards)));
 	}
 
 	public static Game createBeloteGame(List<Card> cards) {
-		return createGame(new BeloteDeck(cards));
+		return createGame(new BeloteDeck(new ArrayList<>(cards)));
 	}
 }

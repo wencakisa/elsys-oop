@@ -4,8 +4,7 @@ import org.elsys.cardgame.api.card.Card;
 
 import java.util.List;
 
-public interface
-Hand {
+public interface Hand {
 
 	List<Card> getCards();
 

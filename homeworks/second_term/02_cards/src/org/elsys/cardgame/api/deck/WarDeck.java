@@ -1,7 +1,7 @@
 package org.elsys.cardgame.api.deck;
 
 import org.elsys.cardgame.api.card.Card;
-import org.elsys.cardgame.api.Rank;
+import org.elsys.cardgame.api.card.Rank;
 
 import java.util.Arrays;
 import java.util.List;

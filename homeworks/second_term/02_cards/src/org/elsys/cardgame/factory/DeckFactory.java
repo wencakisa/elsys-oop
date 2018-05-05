@@ -1,8 +1,9 @@
 package org.elsys.cardgame.factory;
 
-import org.elsys.cardgame.api.*;
 import org.elsys.cardgame.api.card.Card;
 import org.elsys.cardgame.api.card.CardImpl;
+import org.elsys.cardgame.api.card.Rank;
+import org.elsys.cardgame.api.card.Suit;
 import org.elsys.cardgame.api.deck.BeloteDeck;
 import org.elsys.cardgame.api.deck.Deck;
 import org.elsys.cardgame.api.deck.SantaseDeck;

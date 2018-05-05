@@ -23,7 +23,7 @@ public class Main {
         String deckString = in.nextLine();
         List<Card> cards = CardImpl.fromDeckString(deckString);
 
-        Deck deck = new SantaseDeck(cards);
+        Deck deck = new WarDeck(cards);
         Game game = new GameImpl(deck);
 
         while (true) {
@@ -31,7 +31,6 @@ public class Main {
             String token = in.nextLine();
 
             if (token.equals("quit")) {
-                System.out.println("The end!");
                 return;
             }
 

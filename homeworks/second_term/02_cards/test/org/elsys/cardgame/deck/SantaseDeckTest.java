@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.elsys.cardgame.api.deck.Deck;
-import org.elsys.cardgame.api.Rank;
+import org.elsys.cardgame.api.card.Rank;
 import org.elsys.cardgame.factory.DeckFactory;
 
-import static org.elsys.cardgame.api.Rank.*;
+import static org.elsys.cardgame.api.card.Rank.*;
 
 public class SantaseDeckTest extends AbstractDeckTest {
 
