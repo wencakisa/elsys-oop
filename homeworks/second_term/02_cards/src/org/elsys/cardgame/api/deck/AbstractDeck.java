@@ -14,6 +14,8 @@ import java.util.stream.Collectors;
 
 public abstract class AbstractDeck implements Deck {
 
+    private String name;
+
     private List<Card> cards;
 
     private int deckSize;
@@ -22,7 +24,8 @@ public abstract class AbstractDeck implements Deck {
 
     private List<Rank> rankPowers;
 
-    protected AbstractDeck(List<Card> cards, int deckSize, int handSize, List<Rank> rankPowers) {
+    protected AbstractDeck(String name, List<Card> cards, int deckSize, int handSize, List<Rank> rankPowers) {
+        this.name = name;
         this.cards = cards;
         this.deckSize = deckSize;
         this.handSize = handSize;
@@ -36,7 +39,12 @@ public abstract class AbstractDeck implements Deck {
 
     @Override
     public boolean canDeal() {
-        return handSize <= size();
+        return handSize() <= size();
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override

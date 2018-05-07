@@ -13,6 +13,8 @@ public interface Deck {
 
 	boolean canDeal();
 
+	String getName();
+
 	int size();
 
 	int handSize();

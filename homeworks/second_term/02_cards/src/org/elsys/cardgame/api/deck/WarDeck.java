@@ -8,6 +8,8 @@ import java.util.List;
 
 public class WarDeck extends AbstractDeck {
 
+    public static final String NAME = "War";
+
     public static final int DECK_SIZE = 52;
 
     public static final int HAND_SIZE = 26;
@@ -15,6 +17,6 @@ public class WarDeck extends AbstractDeck {
     public static List<Rank> RANK_POWERS = Arrays.asList(Rank.values());
 
     public WarDeck(List<Card> cards) {
-        super(cards, DECK_SIZE, HAND_SIZE, RANK_POWERS);
+        super(NAME, cards, DECK_SIZE, HAND_SIZE, RANK_POWERS);
     }
 }

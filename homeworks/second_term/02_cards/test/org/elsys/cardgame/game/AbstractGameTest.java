@@ -2,6 +2,7 @@ package org.elsys.cardgame.game;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.elsys.cardgame.api.card.Card;
@@ -30,7 +31,7 @@ public abstract class AbstractGameTest {
 		Deck deck = defaultDeck();
 		deck.shuffle();
 		clearDeck = deck.getCards();
-		game = createGame(clearDeck);
+		game = createGame(new ArrayList<>(clearDeck));
 	}
 
 	@Test

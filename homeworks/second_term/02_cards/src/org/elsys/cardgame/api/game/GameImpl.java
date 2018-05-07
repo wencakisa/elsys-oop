@@ -3,7 +3,6 @@ package org.elsys.cardgame.api.game;
 import org.elsys.cardgame.api.hand.Hand;
 import org.elsys.cardgame.api.deck.Deck;
 import org.elsys.cardgame.api.operation.Operation;
-import org.elsys.cardgame.api.operation.deckCreator.WarDeckCreatorOperation;
 import org.elsys.cardgame.api.operation.simple.SizeOperation;
 import org.elsys.cardgame.api.operation.card.*;
 import org.elsys.cardgame.api.operation.deckOrderModifier.ShuffleOperation;
@@ -17,10 +16,13 @@ public class GameImpl implements Game {
     private Deck deck;
 
     private Hand dealtHand;
-
     private List<Operation> operations;
 
     public GameImpl(Deck deck) {
+        if (!deck.canPlay()) {
+            System.err.println("ERROR: Not enough cards for " + deck.getName());
+        }
+
         this.deck = deck;
         this.dealtHand = null;
         this.operations = new ArrayList<>();
@@ -33,7 +35,6 @@ public class GameImpl implements Game {
         this.addOperation(new DealOperation(this));
         this.addOperation(new SortOperation(this));
         this.addOperation(new ShuffleOperation(this));
-//        this.addOperation(new WarDeckCreatorOperation(this));
     }
 
     @Override
