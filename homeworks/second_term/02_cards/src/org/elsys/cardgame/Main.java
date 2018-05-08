@@ -5,8 +5,8 @@ import org.elsys.cardgame.api.deck.WarDeck;
 import org.elsys.cardgame.api.deck.BeloteDeck;
 import org.elsys.cardgame.api.deck.SantaseDeck;
 import org.elsys.cardgame.api.game.Game;
-import org.elsys.cardgame.api.game.GameImpl;
 import org.elsys.cardgame.api.helper.Helper;
+import org.elsys.cardgame.factory.GameFactory;
 
 import java.util.List;
 import java.util.Scanner;
@@ -31,11 +31,11 @@ public class Main {
             }
 
             if (token.equals(WarDeck.NAME)) {
-                game = new GameImpl(new WarDeck(cards));
+                game = GameFactory.createWarGame(cards);
             } else if (token.equals(BeloteDeck.NAME)) {
-                game = new GameImpl(new BeloteDeck(cards));
+                game = GameFactory.createBeloteGame(cards);
             } else if (token.equals(SantaseDeck.NAME)) {
-                game = new GameImpl(new SantaseDeck(cards));
+                game = GameFactory.createSantaseGame(cards);
             } else {
                 if (game != null) {
                     game.process(token);

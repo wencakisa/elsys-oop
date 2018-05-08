@@ -1,6 +1,5 @@
 package org.elsys.cardgame.factory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.elsys.cardgame.api.card.Card;
