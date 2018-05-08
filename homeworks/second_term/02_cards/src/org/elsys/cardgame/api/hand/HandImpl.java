@@ -1,7 +1,6 @@
 package org.elsys.cardgame.api.hand;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.elsys.cardgame.api.card.Card;
 import org.elsys.cardgame.api.helper.Helper;
