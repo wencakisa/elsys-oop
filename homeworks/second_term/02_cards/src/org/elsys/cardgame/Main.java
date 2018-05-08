@@ -1,12 +1,12 @@
 package org.elsys.cardgame;
 
 import org.elsys.cardgame.api.card.Card;
-import org.elsys.cardgame.api.card.CardImpl;
 import org.elsys.cardgame.api.deck.WarDeck;
 import org.elsys.cardgame.api.deck.BeloteDeck;
 import org.elsys.cardgame.api.deck.SantaseDeck;
 import org.elsys.cardgame.api.game.Game;
 import org.elsys.cardgame.api.game.GameImpl;
+import org.elsys.cardgame.api.helper.Helper;
 
 import java.util.List;
 import java.util.Scanner;
@@ -18,7 +18,7 @@ public class Main {
 
         System.out.print("> ");
         String deckString = in.nextLine();
-        List<Card> cards = CardImpl.fromDeckString(deckString);
+        List<Card> cards = Helper.cardsFromString(deckString);
 
         Game game = null;
 

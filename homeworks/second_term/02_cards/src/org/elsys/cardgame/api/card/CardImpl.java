@@ -14,9 +14,6 @@ public class CardImpl implements Card {
     private Suit suit;
     private Rank rank;
 
-    private static final Map<String, Suit> SUIT_MAPPING = Helper.enumValuesMapping(Suit.class);
-    private static final Map<String, Rank> RANK_MAPPING = Helper.enumValuesMapping(Rank.class);
-
     public CardImpl(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
@@ -35,15 +32,6 @@ public class CardImpl implements Card {
     @Override
     public String toString() {
         return getSuit().toString() + getRank().toString();
-    }
-
-    public static List<Card> fromDeckString(String deckString) {
-        return Stream.of(deckString.split(" ")).map(s -> {
-            Suit suit = SUIT_MAPPING.get(s.substring(0, 1));
-            Rank rank = RANK_MAPPING.get(s.substring(1));
-
-            return new CardImpl(suit, rank);
-        }).collect(Collectors.toList());
     }
 
     // Auto-generated equals() and hashCode() methods
