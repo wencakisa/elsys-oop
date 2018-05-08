@@ -26,7 +26,7 @@ public abstract class AbstractDeck implements Deck {
 
     protected AbstractDeck(String name, List<Card> cards, int deckSize, int handSize, List<Rank> rankPowers) {
         this.name = name;
-        this.cards = cards;
+        this.cards = filterCards(cards, rankPowers);
         this.deckSize = deckSize;
         this.handSize = handSize;
         this.rankPowers = rankPowers;
@@ -103,5 +103,9 @@ public abstract class AbstractDeck implements Deck {
     @Override
     public String toString() {
         return Helper.cardListRepresentation(this.cards);
+    }
+
+    private static List<Card> filterCards(List<Card> cards, List<Rank> rankPowers) {
+        return cards.stream().filter(card -> rankPowers.contains(card.getRank())).collect(Collectors.toList());
     }
 }

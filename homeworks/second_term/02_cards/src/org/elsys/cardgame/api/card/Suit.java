@@ -21,14 +21,4 @@ public enum Suit {
 	public String toString() {
 		return symbol;
 	}
-
-	public static Suit getBySymbol(String symbol){
-		for (Suit s : Suit.values()) {
-		    if (s.getSymbol().equals(symbol)) {
-		        return s;
-            }
-		}
-
-		return null;
-	}
 }

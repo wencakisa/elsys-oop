@@ -16,6 +16,7 @@ public class GameImpl implements Game {
     private Deck deck;
 
     private Hand dealtHand;
+
     private List<Operation> operations;
 
     public GameImpl(Deck deck) {
@@ -27,14 +28,14 @@ public class GameImpl implements Game {
         this.dealtHand = null;
         this.operations = new ArrayList<>();
 
-        this.addOperation(new SizeOperation(this));
-        this.addOperation(new TopCardOperation(this));
-        this.addOperation(new BottomCardOperation(this));
-        this.addOperation(new DrawTopCardOperation(this));
-        this.addOperation(new DrawBottomCardOperation(this));
-        this.addOperation(new DealOperation(this));
-        this.addOperation(new SortOperation(this));
-        this.addOperation(new ShuffleOperation(this));
+        addOperation(new SizeOperation(this));
+        addOperation(new TopCardOperation(this));
+        addOperation(new BottomCardOperation(this));
+        addOperation(new DrawTopCardOperation(this));
+        addOperation(new DrawBottomCardOperation(this));
+        addOperation(new DealOperation(this));
+        addOperation(new SortOperation(this));
+        addOperation(new ShuffleOperation(this));
     }
 
     @Override
